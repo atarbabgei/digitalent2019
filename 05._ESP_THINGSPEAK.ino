@@ -41,10 +41,10 @@ void loop()
   val = hallRead();
   //temp = (temprature_sens_read() - 32) / 1.8;
   temp = 70;
-  kirim_thingspeak(val, temp);
+  kirim_thingspeak(temp, val);
 }
  
-void kirim_thingspeak(float hall,float suhu) 
+void kirim_thingspeak(float suhu,float hall) 
 {
   if (client.connect("api.thingspeak.com", 80)) 
   {
