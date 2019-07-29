@@ -17,8 +17,8 @@ String thingSpeakAddress = "api.thingspeak.com";
 String writeAPIKey;
 String tsfield1Name;
 String request_string;
-const char *ssid =  "afb";                        // replace with your wifi ssid and wpa2 key
-const char *pass =  "nananana"; 
+const char *ssid =  "";                        // replace with your wifi ssid and wpa2 key
+const char *pass =  ""; 
 float temp;
 void setup() 
 {
@@ -51,9 +51,9 @@ void kirim_thingspeak(float suhu)
   {
     request_string = "/update?";
     request_string += "key=";
-    request_string += "L24WLXK7I9AGVJ9V";
+    request_string += "L24WLXK7I9AGVJ9V"; // diubah sesuai dengan KEY pada channel
     request_string += "&";
-    request_string += "field2";
+    request_string += "field1";
     request_string += "=";
     request_string += suhu;
  
